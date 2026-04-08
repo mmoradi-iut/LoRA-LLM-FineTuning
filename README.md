@@ -1,5 +1,7 @@
 # LoRA-LLM-FineTuning
 LoRA-based fine-tuning of LLMs for automated test case generation
+<br>
+<img width="800" src="https://github.com/mmoradi-iut/LoRA-LLM-FineTuning/blob/main/image.png">
 
 In this repository, you can find information, results, data, and source codes of the empirical study devoted to evaluation of LoRA-based fine-tuning of LLMs in the context of automated test case generation. The method and experiments are described and discussed in the paper titled "An empirical study of LoRA-based fine-tuning of large language models for automated test case generation".
 
