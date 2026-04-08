@@ -32,4 +32,9 @@ In this repository, you can find information, results, data, and source codes of
 <p>•	Test case description: a high-level explanation of the test objective and scope.</p>
 <p>•	Test steps: a structured, ordered list of executable test steps, typically including actions and expected results.</p>
 
-In order to have access to the datasets and source codes, and get permisions, send an email to m.moradi-vastegani@tricentis.com.
+In order to get permision and have access to the datasets, send an email to m.moradi-vastegani@tricentis.com.
+
+<h2>Experimental pipeline</h2>
+<p>This study follows a structured and end-to-end research, development, and experimentation pipeline designed to systematically evaluate LLMs for automated test case generation. The overall pipeline consists of seven main stages: (1) data processing and preparation, where raw requirement–test case pairs are cleaned and transformed into a consistent training format; (2) model selection, covering both open-source and proprietary LLMs; (3) prompt design and engineering, in which a unified instruction-based prompt and output schema are defined; (4) fine-tuning configuration, including the setup of parameter-efficient fine-tuning mechanisms such as LoRA; (5) model fine-tuning, where models are adapted to the downstream task using the prepared dataset; (6) evaluation configuration, including the design of automated evaluation prompts and scoring criteria; and (7) execution of evaluation experiments to assess and compare model performance. This modular pipeline allows individual components to be adjusted or extended while maintaining experimental consistency and reproducibility.</p>
+
+In order to get permision and have access to the source codes of the experimental pipeline, send an email to m.moradi-vastegani@tricentis.com.
