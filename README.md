@@ -51,3 +51,11 @@ In order to get permision and have access to the source codes of the experimenta
 <p>The evaluation framework assesses generated test cases using nine complementary criteria, designed to capture multiple dimensions of quality relevant to software testing. These criteria extend beyond simple textual similarity and focus on semantic correctness, completeness, clarity, and practical usability. These are nine evaluation criteria in this study:</p>
 
 <p>•	<b>Semantic similarity</b>: It evaluates how closely the overall meaning and intent of the generated test case align with the reference test case, emphasizing conceptual alignment rather than lexical overlap.</p>
+<p>•	<b>Information coverage</b>: It measures how comprehensively the generated output captures important details such as preconditions, actions, expected outcomes, and edge cases.</p>
+<p>•	<b>Critical content match</b>: It assesses whether essential elements such as roles, system components, data attributes, or UI elements are correctly preserved.</p>
+<p>•	<b>Structural and format accuracy</b>: It evaluates whether the output follows the expected structure, including a clear title, type classification, and logically ordered test steps.</p>
+<p>•	<b>Omission</b>: It measures the extent to which important information is missing, with higher scores indicating minimal missing content.</p>
+<p>•	<b>Hallucination</b>: It assesses whether the generated test case introduces unsupported or irrelevant information not grounded in the requirement or reference.</p>
+<p>•	<b>Ambiguity</b>: It evaluates the clarity and precision of the language used, focusing on whether the test case can be easily understood and executed.</p>
+<p>•	<b>Redundancy</b>: It measures the degree of unnecessary repetition, with higher scores indicating concise and well-organized outputs.</p>
+<p>•	<b>Diversity and novelty</b>: It captures whether the generated test case introduces valid alternative interpretations or improvements beyond the reference while remaining logically sound.</p>
