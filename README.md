@@ -6,15 +6,15 @@ In this repository, you can find information, results, data, and source codes of
 <h2>Models under study</h2>
 <p>Open-source models:</p>
 
-<p>•	DeepSeek</p>
-<p>•	Llama</p>
-<p>•	Mistral</p>
+<p>•	<b>DeepSeek</b></p>
+<p>•	<b>Llama</b></p>
+<p>•	<b>Mistral</b></p>
 
 <p>Proprietary models:</p>
 
-<p>•	GPT-4.1</p>
-<p>•	GPT-4.1-mini</p>
-<p>•	GPT-4.1-nano</p>
+<p>•	<b>GPT-4.1</b></p>
+<p>•	<b>GPT-4.1-mini</b></p>
+<p>•	<b>GPT-4.1-nano</b></p>
 
 <h2>Dataset</h2>
 <p>The dataset was collected from an industrial software testing environment, consisting of real-world software requirements and their corresponding manually authored test cases. Each data instance links a requirement artifact to one associated test case, ensuring strong traceability between inputs and outputs. The requirements and test cases originate from a test management system and cover a wide range of functional scenarios, including UI behavior, API interactions, integration logic, and configuration management.</p>
@@ -22,15 +22,15 @@ In this repository, you can find information, results, data, and source codes of
 
 <p>The input to the model consists of:</p>
 
-<p>•	Requirement name: a concise textual identifier describing the feature or change request.</p>
-<p>•	Requirement description: a detailed natural language specification, often including acceptance criteria, functional constraints, and expected system behavior.</p>
+<p>•	<b>Requirement name</b>: a concise textual identifier describing the feature or change request.</p>
+<p>•	<b>Requirement description</b>: a detailed natural language specification, often including acceptance criteria, functional constraints, and expected system behavior.</p>
 
 <p>Given these inputs, the model is expected to generate the following outputs:</p>
 
-<p>•	Test case name: a concise and descriptive title summarizing the intent of the test.</p>
-<p>•	Test case type: a classification of the test (e.g., functional UI, functional API, regression, usability).</p>
-<p>•	Test case description: a high-level explanation of the test objective and scope.</p>
-<p>•	Test steps: a structured, ordered list of executable test steps, typically including actions and expected results.</p>
+<p>•	<b>Test case name</b>: a concise and descriptive title summarizing the intent of the test.</p>
+<p>•	<b>Test case type</b>: a classification of the test (e.g., functional UI, functional API, regression, usability).</p>
+<p>•	<b>Test case description</b>: a high-level explanation of the test objective and scope.</p>
+<p>•	<b>Test steps</b>: a structured, ordered list of executable test steps, typically including actions and expected results.</p>
 
 In order to get permision and have access to the datasets, send an email to m.moradi-vastegani@tricentis.com.
 
@@ -42,9 +42,9 @@ In order to get permision and have access to the source codes of the experimenta
 <h2>Tuned LoRA parameters</h2>
 <p>The effectiveness of LoRA depends strongly on the choice of hyperparameters that govern the capacity and behavior of the low-rank adaptation. In this study, we systematically explored several key LoRA parameters to identify configurations that yield optimal performance for automated test case generation.</p>
 
-<p>•	LoRA rank (r):  It determines the dimensionality of the low-rank matrices and directly controls the expressive capacity of the adaptation. Higher ranks allow the model to learn more complex task-specific transformations but increase the number of trainable parameters and computational overhead. Lower ranks improve efficiency but may limit adaptation capability.</p>
-<p>•	LoRA alpha or scaling factor (α): It controls the magnitude of the LoRA update relative to the frozen base weights. The scaling factor effectively rescales the learned low rank matrices during training and inference, influencing training stability and convergence behavior. Proper tuning of this parameter is important to ensure that the adaptation neither overwhelms the base model nor becomes too weak to capture task-specific patterns.</p>
-<p>•	LoRA dropout: It applies dropout to the low-rank adaptation during training to improve generalization and reduce overfitting, particularly when training data is limited. Dropout introduces stochastic regularization, encouraging the model to rely on robust patterns rather than memorizing specific training examples.</p>
+<p>•	<b>LoRA rank (r)</b>:  It determines the dimensionality of the low-rank matrices and directly controls the expressive capacity of the adaptation. Higher ranks allow the model to learn more complex task-specific transformations but increase the number of trainable parameters and computational overhead. Lower ranks improve efficiency but may limit adaptation capability.</p>
+<p>•	<b>LoRA alpha or scaling factor (α)</b>: It controls the magnitude of the LoRA update relative to the frozen base weights. The scaling factor effectively rescales the learned low rank matrices during training and inference, influencing training stability and convergence behavior. Proper tuning of this parameter is important to ensure that the adaptation neither overwhelms the base model nor becomes too weak to capture task-specific patterns.</p>
+<p>•	<b>LoRA dropout</b>: It applies dropout to the low-rank adaptation during training to improve generalization and reduce overfitting, particularly when training data is limited. Dropout introduces stochastic regularization, encouraging the model to rely on robust patterns rather than memorizing specific training examples.</p>
 
 <h2>Evaluation criteria</h2>
 <p>To enable scalable and consistent evaluation across multiple models and configurations, we adopted a LLM-based evaluation approach, using GPT-4o as an automated judge. GPT-4o was selected due to its strong reasoning ability, instruction-following performance, and demonstrated effectiveness in comparative evaluation tasks involving structured outputs. In this framework, GPT-4o receives the requirement, the model-generated test case, and the corresponding human authored reference test case, and produces structured evaluation scores across predefined criteria. </p>
